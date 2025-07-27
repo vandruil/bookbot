@@ -1,6 +1,6 @@
 from stats import get_word_count
 from stats import get_num_chars
-
+from stats import get_sort_dicts
 def get_book_text(path_to_book):
     with open(path_to_book) as f:
         book_contents = f.read()
