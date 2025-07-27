@@ -9,6 +9,13 @@ def get_book_text(path_to_book):
     return book_contents
 
 
+def get_print_format(dict_list):
+    print_dict = {}
+    for key in dict_list:
+        print(f"{key["char"]}: {key["num"]}")
+        # print_dict[key["char"]] = key["num"]
+
+
 def main():
     input = "books/frankenstein.txt"
     book_text = get_book_text(input)
@@ -16,7 +23,9 @@ def main():
     dict_list = get_sort_dicts(char_count)
     word_count = get_word_count(book_text)
     print(
-        f"============ BOOKBOT ============ \n Analyzing book found at {input}... ----------- Word Count ---------- \n Found {word_count} total words \n --------- Character Count --------- \n {dict_list}")
+        f"============ BOOKBOT ============ \n Analyzing book found at {input}... \n ----------- Word Count ---------- \n Found {word_count} total words \n --------- Character Count ---------")
+    get_print_format(dict_list)
+    print("============= END ===============")
 
 
 main()
