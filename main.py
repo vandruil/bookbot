@@ -11,7 +11,6 @@ def get_book_text(path_to_book):
 
 
 def get_print_format(dict_list):
-    print_dict = {}
     for key in dict_list:
         print(f"{key["char"]}: {key["num"]}")
         # print_dict[key["char"]] = key["num"]
@@ -29,7 +28,7 @@ def main():
         get_print_format(dict_list)
         print("============= END ===============")
     else:
-        print("Usage: poython3 main.py <path_to_book>")
+        print("Usage: python3 main.py <path_to_book>")
         sys.exit(1)
 
 
